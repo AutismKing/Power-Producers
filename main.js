@@ -1,38 +1,39 @@
 var power = 1
-var p = power.toFixed(1);
 var powerIncrement = 1
-var pi = powerIncrement.toFixed(1);
-var multCost = 10
-var multCostScaling = 10
-var expCost = 250
-var mcsCost = 500
+var U2Cost = 10
+var U2CostScaling = 10
+var U3Cost = 150
+var U4Cost = 500
 var superCost = 1000
 var superPoint = 0
 var superPointEffect = superPoint+=1
-function addPower() {
+function format(amount) {
+    return amount.toFixed(0);
+}
+function U1() {
     power+=powerIncrement
 }
 function subPower() {
     power--
 }
-function multPower() {
-    if (power < multCost) return
-    power-=multCost
+function U2() {
+    if (power < U2Cost) return
+    power-=U2Cost
+    powerIncrement+=1
+    U2Cost*=U2CostScaling
+}
+function U3() {
+    if (power < U3Cost) return
+    power-=U3Cost
     powerIncrement*=2
-    multCost*=multCostScaling
+    U3Cost*=10
 }
-function exponentPower() {
-    if (power < expCost) return
-    power-=expCost
-    powerIncrement**=1.5
-    expCost*=10
-}
-function mcScaling() {
-    if (power < mcsCost) return
-    power-=mcsCost
-    multCostScaling*=0.9
-    multCost*=0.9
-    mcsCost*=10
+function U4() {
+    if (power < U4Cost) return
+    power-=U4Cost
+    U2CostScaling*=0.9
+    U2Cost*=0.9
+    U4Cost*=10
 }
 function superPointUpgrade() {
     if (power < superCost) return
@@ -43,11 +44,11 @@ function superPointUpgrade() {
     superCost*=10
 }
 function UI() {
-    document.getElementById("power").textContent = "You are currently producing " + p + " power per second";
-    document.getElementById("multCost").textContent = "costs " + multCost + " power";
-    document.getElementById("powerIncrement").textContent = "+ " + pi + " power";
-    document.getElementById("expCost").textContent = "costs " + expCost + " power";
-    document.getElementById("mcsCost").textContent = "costs " + mcsCost + " power";
+    document.getElementById("power").textContent = "You are currently producing " + format(power) + " power per second";
+    document.getElementById("multCost").textContent = "costs " + U2Cost + " power";
+    document.getElementById("powerIncrement").textContent = "+ " + format(powerIncrement) + " power";
+    document.getElementById("expCost").textContent = "costs " + U3Cost + " power";
+    document.getElementById("mcsCost").textContent = "costs " + U4Cost + " power";
     document.getElementById("superCost").textContent = "costs " + superCost + " power";
     document.getElementById("superPoint").textContent = "you currently have " + superPoint + " SuperPoints, multiplying all Power production by " + superPointEffect + " ";
 }
