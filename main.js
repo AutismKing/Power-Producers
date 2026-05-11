@@ -45,10 +45,10 @@ function superPointUpgrade() {
 }
 function UI() {
     document.getElementById("power").textContent = "You are currently producing " + format(power) + " power per second";
-    document.getElementById("multCost").textContent = "costs " + U2Cost + " power";
+    document.getElementById("U2Cost").textContent = "costs " + U2Cost + " power";
     document.getElementById("powerIncrement").textContent = "+ " + format(powerIncrement) + " power";
-    document.getElementById("expCost").textContent = "costs " + U3Cost + " power";
-    document.getElementById("mcsCost").textContent = "costs " + U4Cost + " power";
+    document.getElementById("U3Cost").textContent = "costs " + U3Cost + " power";
+    document.getElementById("U4Cost").textContent = "costs " + U4Cost + " power";
     document.getElementById("superCost").textContent = "costs " + superCost + " power";
     document.getElementById("superPoint").textContent = "you currently have " + superPoint + " SuperPoints, multiplying all Power production by " + superPointEffect + " ";
 }
