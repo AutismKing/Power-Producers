@@ -6,7 +6,7 @@ var U3Cost = 150
 var U4Cost = 500
 var superCost = 1000
 var superPoint = 0
-var superPointEffect = superPoint+=1
+var superPointEffect = 1
 function format(amount) {
     return amount.toFixed(0);
 }
@@ -39,6 +39,7 @@ function superPointUpgrade() {
     if (power < superCost) return
     power-=superCost
     superPoint+=1
+    superPointEffect+=superPoint
     powerIncrement*=superPointEffect
     powerIncrement*=2
     superCost*=10
@@ -50,6 +51,6 @@ function UI() {
     document.getElementById("U3Cost").textContent = "costs " + U3Cost + " power";
     document.getElementById("U4Cost").textContent = "costs " + U4Cost + " power";
     document.getElementById("superCost").textContent = "costs " + superCost + " power";
-    document.getElementById("superPoint").textContent = "you currently have " + superPoint + " SuperPoints, multiplying all Power production by " + superPointEffect + " ";
+    document.getElementById("superPoint").textContent = "you currently have " + superPoint + " SuperPoints, multiplying all Power production by " + superPointEffect;
 }
 setInterval(UI, 50)
