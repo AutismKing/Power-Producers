@@ -1,4 +1,4 @@
-var power = 1
+var power = 0
 var powerIncrement = 1
 var U2Cost = 10
 var U2CostScaling = 10
@@ -10,9 +10,9 @@ var superPointEffect = 1
 function format(amount) {
     return amount.toFixed(0);
 }
-function U1() {
-    power+=powerIncrement
-}
+setInterval(function U1() {
+    power += powerIncrement
+}, 1000);
 function subPower() {
     power--
 }
@@ -54,3 +54,6 @@ function UI() {
     document.getElementById("superPoint").textContent = "you currently have " + superPoint + " SuperPoints, multiplying all Power production by " + superPointEffect;
 }
 setInterval(UI, 50)
+setInterval(function updateMyGame() {
+    power += powerIncrement
+}, 1000);
