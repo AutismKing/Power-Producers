@@ -43,3 +43,4 @@ function UI() {
     document.getElementById("HomeMadeBoostEffect").textContent = "+" + HomeMade_Boost_Effect + " the base effect of the power generator";
 }
 setInterval(UI, 50)
+setInterval(power_Generator_Total_Effect, 50)
