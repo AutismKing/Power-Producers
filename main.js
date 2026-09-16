@@ -30,8 +30,8 @@ function UI() {
     document.getElementById("power").textContent = "You currently have" + p + "power.";
     document.getElementById("powerGeneratorEffect").textContent = "Gives " + pg + " power";
     document.getElementById("GenBoosterCost").textContent = "costs " + Gen_Booster_Cost + " power";
-    document.getElementById("GenBoosterEffect").textContent = "x" + Gen_Booster_Effect + " effect of power generator";
+    document.getElementById("GenBoosterEffect").textContent = "x " + Gen_Booster_Effect + " effect of power generator";
     document.getElementById("KnockoffBoostCost").textContent = "costs " + Knockoff_Boost_Cost + " power";
-    document.getElementById("KnockoffBoostEffect").textContent = "x" + Knockoff_Boost_Effect + " effect of power generator";
+    document.getElementById("KnockoffBoostEffect").textContent = "x " + Knockoff_Boost_Effect + " effect of power generator";
 }
 setInterval(UI, 50)
