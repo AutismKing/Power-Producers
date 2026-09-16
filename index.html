@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE! HTML>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,26 +8,13 @@
 </head>
 <body>
     <h1>Power Producers</h1>
-
-    <p id="power"></p>
-    <p id="superPoint"></p>
-    <button onclick="U1()" > <p id="powerIncrement"></p>
-
-    </button> 
-    <button onclick="U2()"  > +1 Upgrade 1 effect
-                                     <p id="U2Cost"></p>
-    </button>
-    <button onclick="U3()" > x2 Upgrade 1 effect 
-                                        <p id="U3Cost"></p>
-    </button>
-    <button onclick="U4()" > x 0.9 U2 Cost Scaling
-                                    <p id="U4Cost"></p>  
-    </button>
-    <button onclick="superPointUpgrade()"> Get 1 Super Point and x2 U1 effect
-                                           <p id="superCost"></p> 
-    </button>
-</body>
-<script src="main.js"></script>
-</html>
-
-
+	<h2 style="font-size:110%"> <p id="power"></p> </h2>
+	<button style="background-color:cyan;text-align:center"onclick ="addPower()"> Power Generator.<br><p id="powerIncrement"></p></button>
+	<button style="background-color:cyan"onclick="Gen_Booster()"> Generator Booster.<br><p id="GenBoosterEffect"></p><br><p id="GenBoosterCost"></p></button>
+	<button style="background-color:cyan"onclick="Knockoff_Boost()"> Knockoff Boost.<br><p id="KnockoffBoostEffect"></p><br><p id="KnockoffBoostCost"></p></button>
+	<button style="background-color:cyan"> Home-made Boost.<br>Increase the Base effect of the Power Generator by +1.<br>Costs:500 Power. </button>
+	<br><br><button style="background-color:cyan"> Rebirth.<br>Reset all your power upgrades<br> to gain a multiplier to Power Gain based on<br> current power.<br>Costs:1e9 Power. </button>
+	
+	</body>
+	<script src="main.js"></script>
+	</html>
