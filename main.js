@@ -1,15 +1,15 @@
-var power = 1
+var power = 0
 var p = power.toFixed(1);
-var powerIncrement = 1
-var pi = powerIncrement.toFixed(1);
+var power_Generator_Effect = 1
+var pg = powerIncrement.toFixed(1);
 var Gen_Booster_Effect = 2
 var Gen_Booster_Cost = 10
 var Gen_Booster_CostScaling = 10
 var Knockoff_Boost_Effect = 1.25
 var Knockoff_Boost_Cost = 25
 var Knockoff_Boost_CostScaling = 5
-function addPower() {
-    power+=powerIncrement
+function Power_Generator() {
+    power+=power_Generator_Effect
 }
 function subPower() {
     power--
@@ -28,7 +28,7 @@ function Knockoff_Boost() {
 }
 function UI() {
     document.getElementById("power").textContent = "You currently have" + p + "power.";
-    document.getElementById("powerIncrement").textContent = "Gives " + pi + " power";
+    document.getElementById("powerGeneratorEffect").textContent = "Gives " + pg + " power";
     document.getElementById("GenBoosterCost").textContent = "costs " + Gen_Booster_Cost + " power";
     document.getElementById("GenBoosterEffect").textContent = "x " + Gen_Booster_Effect + "effect of power generator";
     document.getElementById("KnockoffBoostCost").textContent = "costs " + Knockoff_Boost_Cost + " power";
