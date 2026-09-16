@@ -27,7 +27,7 @@ function Knockoff_Boost() {
     Knockoff_Boost_Cost*=Knockoff_Boost_CostScaling
 }
 function UI() {
-    document.getElementById("power").textContent = "You currently have" + p + "power.";
+    document.getElementById("power").textContent = "You currently have " + p + " power.";
     document.getElementById("powerGeneratorEffect").textContent = "Gives " + pg + " power";
     document.getElementById("GenBoosterCost").textContent = "costs " + Gen_Booster_Cost + " power";
     document.getElementById("GenBoosterEffect").textContent = "x " + Gen_Booster_Effect + "effect of power generator";
