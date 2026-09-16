@@ -25,8 +25,8 @@ function Knockoff_Boost() {
     Knockoff_Boost_Cost*=Knockoff_Boost_CostScaling
 }
 function UI() {
-    document.getElementById("power").textContent = "You currently have " + power.toFixed(0) + " power.";
-    document.getElementById("powerGeneratorEffect").textContent = "Gives " + power_Generator_Effect.toFixed(0) + " power";
+    document.getElementById("power").textContent = "You currently have " + power.toFixed(2) + " power.";
+    document.getElementById("powerGeneratorEffect").textContent = "Gives " + power_Generator_Effect.toFixed(2) + " power";
     document.getElementById("GenBoosterCost").textContent = "costs " + Gen_Booster_Cost + " power";
     document.getElementById("GenBoosterEffect").textContent = "x " + Gen_Booster_Effect + " effect of power generator";
     document.getElementById("KnockoffBoostCost").textContent = "costs " + Knockoff_Boost_Cost + " power";
